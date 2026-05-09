@@ -24,11 +24,10 @@ public:
         bool operator!=(const Iterator& other) const { return curr != other.curr; }
         
         Iterator& operator++(); 
-        Iterator& operator--();
+        Iterator& operator--(); 
 
     private:
         Node* curr;
-        friend class CardBST; 
     };
 
     CardBST();
@@ -37,9 +36,8 @@ public:
     bool insert(const Card& card);
     bool remove(const Card& card);
     bool contains(const Card& card) const;
-    void printInOrder() const;
-
-    Iterator begin() const;  
+    
+    Iterator begin() const; 
     Iterator end() const { return Iterator(nullptr); }
     Iterator rbegin() const; 
     Iterator rend() const { return Iterator(nullptr); }
@@ -49,11 +47,8 @@ private:
     void clear(Node *n);
     bool insert(const Card& card, Node *n);
     Node* getNodeFor(const Card& card, Node* n) const;
-    Node* getSuccessorNode(Node* n) const;
-    Node* getPredecessorNode(Node* n) const;
 };
 
 void playGame(CardBST& alice, CardBST& bob);
 
-#endif
 #endif
