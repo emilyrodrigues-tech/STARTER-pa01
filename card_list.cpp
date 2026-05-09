@@ -124,5 +124,4 @@ void playGame(CardBST& alice, CardBST& bob) {
     }
 }
 
-// Nota: Você precisará implementar a função remove(const Card& card) 
-// adaptando a lógica do seu IntBST::remove para usar Card.
+
